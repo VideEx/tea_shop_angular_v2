@@ -1,0 +1,86 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+
+.slick-prev, .slick-next {
+  z-index: 99999;
+}
+
+.ui-widget-content {
+  border: none;
+}
+
+.open {
+  /*transform: rotate(180deg);*/
+  animation: 0.4s rotateIcon linear forwards;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+/*.close {*/
+/*    !*transform: rotate(180deg);*!*/
+/*    animation: 0.4s rotateIcon linear forwards;*/
+/*}*/
+
+/*@keyframes rotateIcon {*/
+/*    from {*/
+/*        transform: rotate(180deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*}*/
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 27px 25px 23px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  background-image: linear-gradient(to top, rgba(7, 107, 255, 1), rgba(0, 123, 255, 1));
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  color: white;
+}
+
+/*.card {*/
+/*    max-width: 414px;*/
+/*}*/
+
+.slick-prev:before, .slick-next:before {
+  border: 1px solid #0a53be;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 9px 13px;
+  color: #0a53be;
+}
+
+.slick-next:before {
+  content: url("./assets/img/icon/next.svg");
+}
+.slick-prev:before {
+  content: url("./assets/img/icon/back.svg");
+}
+
+.icon {
+  transition: transform 0.3s;
+}
+
+.ui-accordion-header-icon {
+  display: none;
+}
+
+.ui-accordion-header-active .icon {
+  transform: rotate(180deg);
+}
+.ui-accordion-header-collapsed .icon {
+
+}

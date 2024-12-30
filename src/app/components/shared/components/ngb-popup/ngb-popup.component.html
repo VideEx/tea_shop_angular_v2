@@ -1,0 +1,9 @@
+<ng-template #popup >
+  <div class="modal-header" >
+    <h4 class="modal-title">{{title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closePopup(false)"></button>
+  </div>
+  <div class="modal-footer flex justify-content-center" >
+    <a [routerLink]="'/products'" class="btn btn-primary" >Смотреть</a>
+  </div>
+</ng-template>

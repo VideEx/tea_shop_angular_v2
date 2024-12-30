@@ -1,0 +1,22 @@
+<div class="container d-flex justify-content-center">
+  <div class=" d-flex flex-column align-text-center justify-content-center align-items-center">
+    <div class="text-center">
+      <h2 class="card-title fw-bold pb-1">{{product.title}}</h2>
+    </div>
+
+    <div class="w-50 tea-block">
+      <img src="{{product.image}}" class="card-img-top" alt="tea bag">
+    </div>
+    <div class="card-body mb-4">
+      <h3 class="card-title fw-bold pb-1 text-black fs-6 mb-2">Цена: {{product.price}} руб.</h3>
+
+      <p class="card-text pb-1 mb-2">{{product.description}}</p>
+      <div class="btn-block">
+        <a routerLink="/order" [queryParams]="{product: product.title}" class="btn btn-primary hvr-shadow"
+           style="--bs-btn-padding-y: .37rem; --bs-btn-padding-x: 3.34rem;">Купить</a>
+        <a routerLink="/products" class="btn btn-outline-primary"
+           style="--bs-btn-padding-y: .37rem; --bs-btn-padding-x: 3.34rem; margin-left: 20px;">Назад</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="col d-flex justify-content-center">
+  <div class="card " style="width: 22rem;">
+    <img src="{{product.image}}" class="card-img-top" alt="tea bag">
+    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+      <h5 class="card-title fw-bold pb-1">{{product.title}}</h5>
+      <p class="card-text pb-1 mb-4 text-center">{{product.description | shortenText: 80}}</p>
+      <a [routerLink]="['/products', product.id]" class="btn btn-primary hvr-shadow"
+         style="--bs-btn-padding-y: .37rem; --bs-btn-padding-x: 3.34rem;">Подробнее</a>
+    </div>
+  </div>
+</div>
